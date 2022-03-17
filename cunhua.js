@@ -9,12 +9,12 @@ var ckm =登录();
       
 //登录       
 function 登录(){
-var username = "lu66666";
-var password = "mmling123";
-var url="https://www.cunhua.pro/member.php?mod=logging&action=login&loginsubmit=yes&handlekey=login&loginhash=LL3xR&inajax=1";
+var username = "komeanx";
+var password = "V9SDn4R4jvL2XWn";
+var url="https://www.cunhua.sbs/member.php?mod=logging&action=login&loginsubmit=yes&handlekey=login&loginhash=LL3xR&inajax=1";
 res = http.post(url,{
      // "formhash":"a2bd39b0",
-      "referer":"https%3A%2F%2Fwww.cunhua.pro",
+      "referer":"https%3A%2F%2Fwww.cunhua.sbs",
       "loginfield":"username",
       "username":username,
       "password":password,
@@ -34,7 +34,7 @@ return(ckm);
 
 
 function refresh(){
-    var url3 ="https://www.cunhua.pro";
+    var url3 ="https://www.cunhua.sbs";
     res3 = http.post(url3,{},{headers:{"cookie":cookie}});
     re3=res3.body.string();
     var formhasha = re3.match(/formhash=(.*?)[A-Za-z\d]{8}/g)[0];
@@ -46,13 +46,13 @@ function refresh(){
 function 签到(){
     
     var formhash = refresh();
-    var url ="https://www.cunhua.pro/plugin.php?id=dc_signin:sign&inajax=1";
+    var url ="https://www.cunhua.sbs/plugin.php?id=dc_signin:sign&inajax=1";
     res = http.post(url,{
     "formhash":formhash,
      "signsubmit":"yes",
      "handlekey":"signin",
      "emotid":"1",
-      "referer":"https%3A%2F%2Fwww.cunhua.pro",
+      "referer":"https%3A%2F%2Fwww.cunhua.sbs",
       "content":"%E8%AE%B0%E4%B8%8A%E4%B8%80%E7%AC%94%EF%BC%8Chold%E4%BD%8F%E6%88%91%E7%9A%84%E5%BF%AB%E4%B9%90%EF%BC%81"
     },{headers:{"cookie":cookie}});
     log(res.body.string());
